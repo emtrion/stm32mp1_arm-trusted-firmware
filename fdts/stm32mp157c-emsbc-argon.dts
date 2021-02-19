@@ -246,8 +246,7 @@
 		reg = <0>;
 		u-boot,dm-spl;
 		spi-max-frequency = <10000000>;
-		spi-rx-bus-width = <1>;
-		spi-tx-bus-width = <1>;
+		spi-rx-bus-width = <2>;
 		#address-cells = <1>;
 		#size-cells = <1>;
 	};
