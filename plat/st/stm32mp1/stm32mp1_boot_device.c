@@ -154,13 +154,13 @@ int plat_get_nor_data(struct nor_device *device)
 	device->size = SZ_64M;
 
 	zeromem(&device->read_op, sizeof(struct spi_mem_op));
-	device->read_op.cmd.opcode = SPI_NOR_OP_READ_1_1_4;
+	device->read_op.cmd.opcode = SPI_NOR_OP_READ_1_1_2;
 	device->read_op.cmd.buswidth = SPI_MEM_BUSWIDTH_1_LINE;
 	device->read_op.addr.nbytes = 3U;
 	device->read_op.addr.buswidth = SPI_MEM_BUSWIDTH_1_LINE;
 	device->read_op.dummy.nbytes = 1U;
 	device->read_op.dummy.buswidth = SPI_MEM_BUSWIDTH_1_LINE;
-	device->read_op.data.buswidth = SPI_MEM_BUSWIDTH_4_LINE;
+	device->read_op.data.buswidth = SPI_MEM_BUSWIDTH_2_LINE;
 	device->read_op.data.dir = SPI_MEM_DATA_IN;
 
 	return 0;
